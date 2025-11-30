@@ -1,0 +1,17 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+nav{
+    background-color: #111827;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px ;
+    font-size: 18px;
+
+    @media (max-width:400px) {
+        font-size: 14px;
+    }
+}

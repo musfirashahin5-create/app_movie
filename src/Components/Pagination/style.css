@@ -1,0 +1,22 @@
+.btncontainer{
+
+    display: flex;
+    justify-content: space-between;
+    margin: 6px;
+    
+
+    @media (max-width: 400px) {
+        font-size: 14px;
+    }
+
+}
+
+.btncontainer button{
+    background-color: #111827;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
