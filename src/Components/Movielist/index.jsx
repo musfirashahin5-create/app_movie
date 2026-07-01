@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import MovieCard from "./Moviecard";
+import Moviecard from "./Moviecard";
 import "./style.css";
 import MovieContext from "../context/MovieContext";
 
