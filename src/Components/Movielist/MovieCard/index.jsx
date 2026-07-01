@@ -1,6 +1,6 @@
 import "./style.css";
 
-const MovieCard = ({ posterUrl, movieTitle, movieReleaseDate }) => {
+const Moviecard = ({ posterUrl, movieTitle, movieReleaseDate }) => {
   return (
     <div className="container">
       <img src={posterUrl} alt="Movie poster" />
@@ -10,4 +10,4 @@ const MovieCard = ({ posterUrl, movieTitle, movieReleaseDate }) => {
   );
 };
 
-export default MovieCard;
+export default Moviecard;
