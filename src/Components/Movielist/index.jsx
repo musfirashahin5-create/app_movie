@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import "./style.css";
 import MovieContext from "../context/MovieContext";
+import Searchbar from "../Searchbar";
 
 const Movielist = () => {
     const { page } = useContext(MovieContext);
@@ -33,7 +34,7 @@ const Movielist = () => {
             });
     };*/
     const fetchMovies = () => {
-        setLoading(true);
+        /*setLoading(true);*/
 
         let url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`;
 
@@ -86,13 +87,27 @@ const Movielist = () => {
     }, [page, search]);
 
 
-    if (loading) {
+    /*if (loading) {
         return <h1>Loading...</h1>;
-    }
+    }*/
 
+    { loading && <h2>Loading...</h2> }
+
+    <div className="Movielist">
+        {movielist.map((movie) => (
+            <MovieCard
+                key={movie.id}
+                movieTitle={movie.title}
+                movieReleaseDate={movie.release_date}
+                posterUrl={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            />
+        ))}
+    </div>
     return (
         <>
 
+
+            <Searchbar setSearch={setSearch} />
             <div className="Movielist">
                 {movielist.map((movie) => (
                     <MovieCard
